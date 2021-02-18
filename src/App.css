@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@font-face {
+	font-family: fifteen;
+	src: url(Pacifico-Regular.woff);
+}
+@font-face {
+	font-family: newGame;
+	src: url(ClearSans-Bold-webfont.woff);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #57407c;
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+table {
+	width: 450px;
+	height: 450px;
+	margin: 0 auto;
+	border-spacing: 10px;
+	border-collapse: separate;
+}
+td {
+	text-align: center;
+	font-size: 50pt;
+	font-family: fifteen;
+	font-weight: bold;
+	border-radius: 12px;
+	color: #ffffff;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+.tale {
+	background-color: #6ac6b8;
+	text-shadow: 3px 3px 2px #489591;
+}
+.hole {
+	background-color: #3d2963;
+}
+.on-place {
+	background-color: #e88a45;
+	text-shadow: 3px 3px 2px #cd583a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game-info {
+	background-color: #3d2963;
+	width: 300px;
+	height: 50px;
+	color: white;
+	margin-top: 30px;
+	border-radius: 12px;
+	font-family: newGame;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.game-info-button {
+	background-color: #3d2963;
+	width: 200px;
+	height: 50px;
+	color: white;
+	margin-top: 30px;
+	border-radius: 12px;
+	font-family: newGame;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+button {
+	border: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-text {
+	font-size: 50pt;
+	font-family: fifteen;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4%;
 }

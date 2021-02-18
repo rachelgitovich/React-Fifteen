@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore, compose } from 'redux';
+import rootReducer from './redux/combine';
+import './App.css';
+import Game from './components/Game';
+
+const enhancers = compose(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const initialState = { showModal: false };
+const store = createStore(rootReducer, initialState, enhancers);
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Provider store={store}>
+			<Game />
+		</Provider>
+	);
 }
 
 export default App;
